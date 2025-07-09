@@ -5,9 +5,8 @@ class Solution:
             return 0
         
         sign = 1
-        num = 0
 
-        if num == 0 and not s[0].isdigit():
+        if not s[0].isdigit():
             if s[0] == '-':
                 sign = -1
                 s = s[1:]
@@ -22,6 +21,9 @@ class Solution:
                 index += 1
             else:
                 break
+        
+        if index == 0:
+            return 0
 
         num = sign * int(s[:index])
 
